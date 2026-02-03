@@ -4,15 +4,16 @@
    =================================== */
 :root {
     /* Colors - Retro Monochromatic Palette */
-    --color-bg-primary: #f5f5f0;
-    --color-bg-secondary: #ebebeb;
-    --color-bg-tertiary: #e0e0db;
+    --color-bg-primary: #fffbea;
+    --color-bg-secondary: #f0e6d2;
+    --color-bg-tertiary: #e6dac3;
     --color-bg-card: #ffffff;
 
     /* Accent Colors - Minimal, Retro */
     --color-accent-primary: #2d2d2d;
     --color-accent-secondary: #4a4a4a;
     --color-accent-retro: #6b6b6b;
+    --color-border-subtle: #8c7b66;
 
     /* Text Colors */
     --color-text-primary: #1a1a1a;
@@ -20,8 +21,8 @@
     --color-text-muted: #7a7a7a;
 
     /* Typography - Pixel/Monospace Fonts */
-    --font-primary: 'Courier New', 'Courier', monospace;
-    --font-heading: 'Courier New', 'Courier', monospace;
+    --font-primary: 'VT323', monospace;
+    --font-heading: 'Press Start 2P', cursive;
 
     /* Spacing */
     --spacing-xs: 0.5rem;
@@ -38,12 +39,15 @@
     --radius-lg: 6px;
 
     /* Shadows - Harder edges for retro look */
-    --shadow-pixel: 4px 4px 0px rgba(0, 0, 0, 0.2);
-    --shadow-pixel-lg: 6px 6px 0px rgba(0, 0, 0, 0.15);
+    --shadow-pixel: 4px 4px 0px #5c8a4b;
+    --shadow-pixel-lg: 6px 6px 0px #3e5c32;
+
+    /* Plant Decoration */
+    --animation-float: float 3s ease-in-out infinite;
 
     /* Transitions */
-    --transition-fast: 0.1s ease;
-    --transition-base: 0.2s ease;
+    --transition-fast: 0s;
+    --transition-base: 0s;
 }
 
 /* ===================================
@@ -58,7 +62,7 @@
 }
 
 html {
-    font-size: 16px;
+    font-size: 18px;
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
     /* Fixed: Prevent section overlap with header */
@@ -158,8 +162,8 @@ a:hover {
 
 .section-alt {
     background: var(--color-bg-secondary);
-    border-top: 3px solid var(--color-text-primary);
-    border-bottom: 3px solid var(--color-text-primary);
+    border-top: 2px solid var(--color-text-primary);
+    border-bottom: 2px solid var(--color-text-primary);
 }
 
 .section-title {
@@ -170,19 +174,12 @@ a:hover {
     padding: var(--spacing-sm) var(--spacing-lg);
     background: var(--color-text-primary);
     color: var(--color-bg-primary);
-    border: 3px solid var(--color-text-primary);
+    border: 2px solid var(--color-text-primary);
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
 }
 
 .section-title::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    right: -8px;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border: 3px solid var(--color-text-primary);
-    z-index: -1;
+    display: none;
 }
 
 /* ===================================
@@ -194,7 +191,7 @@ a:hover {
     left: 0;
     width: 100%;
     background: var(--color-bg-primary);
-    border-bottom: 3px solid var(--color-text-primary);
+    border-bottom: 2px solid var(--color-text-primary);
     z-index: 1000;
     transition: all var(--transition-base);
 }
@@ -217,7 +214,7 @@ a:hover {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--color-text-primary);
-    border: 3px solid var(--color-text-primary);
+    border: 2px solid var(--color-text-primary);
     padding: 0.25rem 0.75rem;
     background: var(--color-bg-primary);
 }
@@ -306,7 +303,7 @@ a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border: 4px solid var(--color-text-primary);
+    border: 2px solid var(--color-text-primary);
     box-shadow: var(--shadow-pixel-lg);
     position: relative;
     z-index: 2;
@@ -315,8 +312,15 @@ a:hover {
 }
 
 .profile-glow {
-    display: none;
-    /* Remove glow for retro aesthetic */
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.3);
+    z-index: 1;
+    pointer-events: none;
 }
 
 .hero-title {
@@ -370,7 +374,7 @@ a:hover {
     transform: translateX(-50%);
     width: 24px;
     height: 40px;
-    border: 3px solid var(--color-text-primary);
+    border: 2px solid var(--color-text-primary);
     display: flex;
     justify-content: center;
     padding-top: 6px;
@@ -395,7 +399,7 @@ a:hover {
     font-size: 0.875rem;
     cursor: pointer;
     transition: all var(--transition-fast);
-    border: 3px solid var(--color-text-primary);
+    border: 2px solid var(--color-text-primary);
     text-decoration: none;
     text-transform: uppercase;
     font-family: var(--font-primary);
@@ -417,7 +421,7 @@ a:hover {
 .btn-secondary {
     background: var(--color-bg-primary);
     color: var(--color-text-primary);
-    border: 3px solid var(--color-text-primary);
+    border: 2px solid var(--color-text-primary);
 }
 
 .btn-secondary:hover {
@@ -435,7 +439,7 @@ a:hover {
    =================================== */
 .card {
     background: var(--color-bg-card);
-    border: 3px solid var(--color-text-primary);
+    /* border removal */
     padding: var(--spacing-lg);
     transition: all var(--transition-fast);
     box-shadow: var(--shadow-pixel);
@@ -521,7 +525,7 @@ a:hover {
     left: 0;
     top: 0;
     height: 100%;
-    width: 3px;
+    width: 2px;
     background: var(--color-text-primary);
 }
 
@@ -538,13 +542,14 @@ a:hover {
     width: 15px;
     height: 15px;
     background: var(--color-text-primary);
-    border: 3px solid var(--color-bg-secondary);
+    /* border removed */
 }
 
 .timeline-content h3 {
     color: var(--color-text-primary);
     margin-bottom: var(--spacing-xs);
-    font-size: 1.125rem;
+    font-size: 1.25rem;
+    font-weight: 700;
 }
 
 .timeline-header {
@@ -601,7 +606,7 @@ a:hover {
     padding: 0.25rem 0.75rem;
     font-size: 0.75rem;
     font-weight: 700;
-    border: 2px solid var(--color-text-primary);
+    border: 1px solid var(--color-text-primary);
     text-transform: uppercase;
 }
 
@@ -652,8 +657,8 @@ a:hover {
 .section-cta {
     background: var(--color-bg-secondary);
     text-align: center;
-    border-top: 3px solid var(--color-text-primary);
-    border-bottom: 3px solid var(--color-text-primary);
+    border-top: 2px solid var(--color-text-primary);
+    border-bottom: 2px solid var(--color-text-primary);
 }
 
 .cta-content h2 {
@@ -673,7 +678,7 @@ footer {
     background: var(--color-bg-tertiary);
     padding: var(--spacing-xl) 0;
     text-align: center;
-    border-top: 3px solid var(--color-text-primary);
+    border-top: 2px solid var(--color-text-primary);
 }
 
 footer .container {
@@ -737,9 +742,224 @@ footer .container {
     animation: fadeInUp 0.6s ease-out forwards;
 }
 
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.pixel-plant {
+    position: absolute;
+    width: 80px;
+    image-rendering: pixelated;
+    z-index: 10;
+    animation: var(--animation-float);
+    filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.1));
+}
+
+.plant-hero {
+    bottom: 20px;
+    right: 10%;
+    width: 100px;
+}
+
+.plant-footer {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    vertical-align: middle;
+    margin-left: var(--spacing-sm);
+}
+
+/* Scattered Plants */
+.plant-decoration {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    animation: var(--animation-float);
+    filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.1));
+}
+
+.plant-nav {
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    animation-delay: 0.5s;
+}
+
+.plant-education {
+    bottom: -20px;
+    left: 20px;
+    width: 70px;
+    animation-delay: 1s;
+    transform: scaleX(-1);
+    /* Flip for variety */
+}
+
+.plant-experience-1 {
+    top: 100px;
+    right: -30px;
+    width: 60px;
+    animation-delay: 1.5s;
+}
+
+.plant-experience-2 {
+    bottom: 50px;
+    left: -20px;
+    width: 80px;
+    animation-delay: 0.2s;
+}
+
+.plant-hobbies {
+    top: -40px;
+    right: 10%;
+    width: 65px;
+    animation-delay: 2s;
+}
+
+@media (max-width: 768px) {
+    .plant-decoration {
+        display: none;
+        /* Hide decorative plants on mobile to avoid clutter */
+    }
+
+    .plant-hero {
+        width: 70px;
+        right: 0;
+    }
+}
+
 /* ===================================
-   Responsive Design
+   CSS Pixel Art Decorations
    =================================== */
+
+/* Animated Butterfly */
+@keyframes fly {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    25% {
+        transform: translate(100px, -50px) scale(0.8);
+    }
+
+    50% {
+        transform: translate(20px, -100px) scale(1);
+    }
+
+    75% {
+        transform: translate(-50px, -20px) scale(0.9);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+@keyframes wing-flap {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+        transform: scaleY(0.8);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.pixel-butterfly {
+    position: fixed;
+    /* Fixed to viewport for "scrolling with user" feel or absolute for page */
+    width: 6px;
+    height: 6px;
+    background: transparent;
+    color: #FF5733;
+    /* Butterfly color */
+    pointer-events: none;
+    z-index: 50;
+    /* 8-bit Butterfly Shape using box-shadow */
+    box-shadow:
+        2px 0px 0px 0px currentcolor,
+        5px 0px 0px 0px currentcolor,
+        0px 2px 0px 0px currentcolor,
+        2px 2px 0px 0px currentcolor,
+        5px 2px 0px 0px currentcolor,
+        7px 2px 0px 0px currentcolor,
+        1px 5px 0px 0px currentcolor,
+        3px 5px 0px 0px currentcolor,
+        4px 5px 0px 0px currentcolor,
+        6px 5px 0px 0px currentcolor;
+    animation: fly 20s linear infinite, wing-flap 0.2s steps(2) infinite;
+}
+
+.butterfly-1 {
+    top: 20%;
+    left: 10%;
+    animation-duration: 25s, 0.3s;
+    color: #e66b6b;
+}
+
+.butterfly-2 {
+    top: 60%;
+    right: 15%;
+    animation-duration: 30s, 0.4s;
+    color: #4da6ff;
+}
+
+.butterfly-3 {
+    top: 80%;
+    left: 25%;
+    animation-duration: 22s, 0.25s;
+    color: #ffd700;
+}
+
+/* 8-bit Vines on Card Corners */
+.card-vine::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: 4px;
+    height: 4px;
+    color: #5c8a4b;
+    /* Pixel art vine pattern corner */
+    box-shadow:
+        4px 0px, 8px 0px,
+        0px 4px, 4px 4px,
+        0px 8px,
+        0px 12px, 4px 12px;
+    pointer-events: none;
+}
+
+.card-vine::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    right: -4px;
+    width: 4px;
+    height: 4px;
+    color: #5c8a4b;
+    /* Pixel art vine pattern opposite corner */
+    box-shadow:
+        -4px 0px, -8px 0px,
+        0px -4px, -4px -4px,
+        0px -8px,
+        0px -12px, -4px -12px;
+    pointer-events: none;
+}
+
 @media (max-width: 768px) {
     html {
         font-size: 14px;
@@ -763,7 +983,7 @@ footer .container {
         opacity: 0;
         pointer-events: none;
         transition: all var(--transition-base);
-        border-bottom: 3px solid var(--color-text-primary);
+        border-bottom: 2px solid var(--color-text-primary);
     }
 
     .nav-menu.active {
