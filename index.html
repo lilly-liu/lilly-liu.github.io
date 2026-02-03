@@ -1,1 +1,256 @@
-<h1>My Portfolio</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Lilly Liu - Software Engineer Portfolio | SWE2 specializing in full-stack development">
+    <title>Lilly Liu | Software Engineer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">LL</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#hobbies" class="nav-link">Hobbies</a></li>
+                <li><a href="#resume" class="nav-link nav-link-cta">Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="profile-image-container">
+                <img src="profile.jpg" alt="Lilly Liu" class="profile-image">
+                <div class="profile-glow"></div>
+            </div>
+            <h1 class="hero-title">
+                Hi, I'm <span class="gradient-text">Lilly Liu</span>
+            </h1>
+            <p class="hero-subtitle">Software Engineer II</p>
+            <p class="hero-description">
+                Building elegant solutions to complex problems. Passionate about creating
+                impactful software that makes a difference.
+            </p>
+            <div class="hero-cta">
+                <a href="#experience" class="btn btn-primary">View My Work</a>
+                <a href="resume.pdf" download class="btn btn-secondary">Download Resume</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-grid">
+                <div class="card education-card">
+                    <div class="card-icon">🎓</div>
+                    <h3>Bachelor of Science in Computer Science</h3>
+                    <p class="institution">University Name</p>
+                    <p class="year">2018 - 2022</p>
+                    <ul class="details">
+                        <li>GPA: 3.8/4.0</li>
+                        <li>Relevant Coursework: Data Structures, Algorithms, Software Engineering, Database Systems
+                        </li>
+                        <li>Dean's List: All Semesters</li>
+                    </ul>
+                </div>
+                <div class="card education-card">
+                    <div class="card-icon">📚</div>
+                    <h3>Certifications & Courses</h3>
+                    <ul class="details">
+                        <li>AWS Certified Developer - Associate</li>
+                        <li>Advanced React & TypeScript</li>
+                        <li>System Design Fundamentals</li>
+                        <li>Machine Learning Specialization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="card timeline-content">
+                        <div class="timeline-header">
+                            <h3>Software Engineer II</h3>
+                            <span class="timeline-date">2023 - Present</span>
+                        </div>
+                        <p class="company">Tech Company Inc.</p>
+                        <ul class="achievements">
+                            <li>Led development of microservices architecture serving 1M+ daily users</li>
+                            <li>Reduced API response time by 40% through optimization and caching strategies</li>
+                            <li>Mentored 3 junior engineers and conducted code reviews</li>
+                            <li>Implemented CI/CD pipelines reducing deployment time by 60%</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">AWS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="card timeline-content">
+                        <div class="timeline-header">
+                            <h3>Software Engineer I</h3>
+                            <span class="timeline-date">2022 - 2023</span>
+                        </div>
+                        <p class="company">Startup Solutions LLC</p>
+                        <ul class="achievements">
+                            <li>Developed full-stack features for SaaS platform using React and Python</li>
+                            <li>Collaborated with design team to implement responsive UI components</li>
+                            <li>Wrote comprehensive unit and integration tests achieving 85% code coverage</li>
+                            <li>Participated in agile ceremonies and sprint planning</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="card timeline-content">
+                        <div class="timeline-header">
+                            <h3>Software Engineering Intern</h3>
+                            <span class="timeline-date">Summer 2021</span>
+                        </div>
+                        <p class="company">Innovation Labs</p>
+                        <ul class="achievements">
+                            <li>Built internal dashboard for monitoring system metrics</li>
+                            <li>Automated data processing workflows saving 10 hours/week</li>
+                            <li>Contributed to open-source projects and documentation</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section id="hobbies" class="section">
+        <div class="container">
+            <h2 class="section-title">Hobbies & Extracurriculars</h2>
+            <div class="hobbies-grid">
+                <div class="card hobby-card">
+                    <a href="hobbies/open-source.html">
+                        <div class="hobby-icon">💻</div>
+                        <h3>Open Source</h3>
+                        <p>Contributing to open-source projects and maintaining personal libraries on GitHub</p>
+                    </a>
+                </div>
+                <div class="card hobby-card">
+                    <a href="hobbies/ui-ux-design.html">
+                        <div class="hobby-icon">🎨</div>
+                        <h3>UI/UX Design</h3>
+                        <p>Exploring design principles and creating beautiful, user-friendly interfaces</p>
+                    </a>
+                </div>
+                <div class="card hobby-card">
+                    <a href="hobbies/tech-blogging.html">
+                        <div class="hobby-icon">📖</div>
+                        <h3>Tech Blogging</h3>
+                        <p>Writing technical articles about software engineering best practices and tutorials</p>
+                    </a>
+                </div>
+                <div class="card hobby-card">
+                    <a href="hobbies/running.html">
+                        <div class="hobby-icon">🏃‍♀️</div>
+                        <h3>Running</h3>
+                        <p>Marathon runner and fitness enthusiast, completed 3 half-marathons</p>
+                    </a>
+                </div>
+                <div class="card hobby-card">
+                    <a href="hobbies/music.html">
+                        <div class="hobby-icon">🎵</div>
+                        <h3>Music</h3>
+                        <p>Playing piano and guitar, exploring different genres and compositions</p>
+                    </a>
+                </div>
+                <div class="card hobby-card">
+                    <a href="hobbies/mentorship.html">
+                        <div class="hobby-icon">🌱</div>
+                        <h3>Mentorship</h3>
+                        <p>Volunteering as a coding mentor for underrepresented groups in tech</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Download Section -->
+    <section id="resume" class="section section-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Interested in working together?</h2>
+                <p>Download my resume to learn more about my experience and skills</p>
+                <a href="resume.pdf" download class="btn btn-large">
+                    <span>Download Resume</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M10 14L5 9L6.4 7.6L9 10.2V2H11V10.2L13.6 7.6L15 9L10 14Z" fill="currentColor" />
+                        <path d="M4 18V14H2V18C2 18.55 2.45 19 3 19H17C17.55 19 18 18.55 18 18V14H16V18H4Z"
+                            fill="currentColor" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Lilly Liu. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="mailto:lilly@example.com">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
