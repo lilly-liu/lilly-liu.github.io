@@ -353,6 +353,7 @@ a:hover {
 }
 
 .hero-title {
+    font-size: clamp(1.5rem, 3.5vw, 2.5rem);
     margin-bottom: var(--spacing-sm);
 }
 
@@ -381,7 +382,7 @@ a:hover {
 }
 
 .hero-description {
-    font-size: 1rem;
+    font-size: 1.25rem;
     color: var(--color-text-secondary);
     margin-bottom: var(--spacing-xl);
     max-width: 600px;
@@ -467,6 +468,7 @@ a:hover {
    Cards
    =================================== */
 .card {
+    position: relative;
     background: var(--color-bg-card);
     /* border removal */
     padding: var(--spacing-lg);
@@ -482,22 +484,37 @@ a:hover {
 /* ===================================
    Education Section
    =================================== */
-.education-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-xl);
-    max-width: 900px;
+.education-list {
+    position: relative;
+    max-width: 800px;
     margin: 0 auto;
+    overflow: visible;
 }
 
 .education-card {
     text-align: center;
+    font-size: 1.5rem;
+}
+
+.education-oski {
+    position: absolute;
+    right: calc(-2 * var(--spacing-lg));
+    bottom: calc(-1.5 * var(--spacing-3xl));
+    max-width: 280px;
+    max-height: 280px;
+    width: 280px;
+    height: auto;
+    object-fit: contain;
+    object-position: bottom right;
+    pointer-events: none;
+    mix-blend-mode: multiply;
 }
 
 .card-icon {
-    font-size: 2.5rem;
+    width: 10rem;   /* or whatever size you want, e.g. 48px */
+    height: 10rem;
+    object-fit: contain;
     margin-bottom: var(--spacing-md);
-    filter: grayscale(100%);
 }
 
 .education-card h3 {
@@ -514,7 +531,7 @@ a:hover {
 
 .year {
     color: var(--color-text-muted);
-    font-size: 0.875rem;
+    font-size: 1.5rem;
     margin-bottom: var(--spacing-md);
 }
 
@@ -528,7 +545,7 @@ a:hover {
     color: var(--color-text-secondary);
     position: relative;
     padding-left: var(--spacing-md);
-    font-size: 0.9375rem;
+    font-size: 1.125rem;
 }
 
 .details li::before {
@@ -544,34 +561,57 @@ a:hover {
    =================================== */
 .timeline {
     position: relative;
-    max-width: 900px;
+    max-width: 800px;
     margin: 0 auto;
+    transform: translateX(-40px);  /* adjust pixels as needed */
 }
 
+/* Vertical line: fixed position so it’s visible; runs down the “line” column */
 .timeline::before {
     content: '';
     position: absolute;
-    left: 0;
+    left: 100px;
     top: 0;
     height: 100%;
     width: 2px;
     background: var(--color-text-primary);
+    z-index: 0;
 }
 
 .timeline-item {
     position: relative;
-    padding-left: var(--spacing-2xl);
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 90px 22px 1fr;
+    gap: 0;
+    align-items: start;
     margin-bottom: var(--spacing-xl);
 }
 
+/* Date: left of the line, right-aligned so it sits next to the line */
+.timeline-item > .timeline-date {
+    grid-column: 1;
+    padding-right: var(--spacing-sm);
+    text-align: right;
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+/* Marker: centered on the vertical line */
 .timeline-marker {
-    position: absolute;
-    left: -6px;
-    top: 0;
+    grid-column: 2;
     width: 15px;
     height: 15px;
     background: var(--color-text-primary);
-    /* border removed */
+    justify-self: center;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.timeline-content {
+    grid-column: 3;
 }
 
 .timeline-content h3 {
@@ -582,11 +622,6 @@ a:hover {
 }
 
 .timeline-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: var(--spacing-sm);
     margin-bottom: var(--spacing-xs);
 }
 
@@ -956,41 +991,6 @@ footer .container {
     color: #ffd700;
 }
 
-/* 8-bit Vines on Card Corners */
-.card-vine::before {
-    content: '';
-    position: absolute;
-    top: -4px;
-    left: -4px;
-    width: 4px;
-    height: 4px;
-    color: #5c8a4b;
-    /* Pixel art vine pattern corner */
-    box-shadow:
-        4px 0px, 8px 0px,
-        0px 4px, 4px 4px,
-        0px 8px,
-        0px 12px, 4px 12px;
-    pointer-events: none;
-}
-
-.card-vine::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    right: -4px;
-    width: 4px;
-    height: 4px;
-    color: #5c8a4b;
-    /* Pixel art vine pattern opposite corner */
-    box-shadow:
-        -4px 0px, -8px 0px,
-        0px -4px, -4px -4px,
-        0px -8px,
-        0px -12px, -4px -12px;
-    pointer-events: none;
-}
-
 @media (max-width: 768px) {
     html {
         font-size: 14px;
@@ -1055,18 +1055,18 @@ footer .container {
     }
 
     .timeline::before {
-        left: 6px;
+        left: 70px;
     }
 
     .timeline-item {
-        padding-left: var(--spacing-xl);
+        grid-template-columns: 60px 22px 1fr;
     }
 
-    .timeline-header {
-        flex-direction: column;
+    .timeline-item > .timeline-date {
+        font-size: 0.75rem;
+        padding-right: var(--spacing-xs);
     }
 
-    .education-grid,
     .hobbies-grid {
         grid-template-columns: 1fr;
     }
