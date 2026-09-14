@@ -105,7 +105,7 @@
       <nav class="footer-column" aria-label="Footer pages"><span class="eyebrow">Pages</span>${pages.slice(1).map(link).join("")}</nav>
       <nav class="footer-column" aria-label="Elsewhere"><span class="eyebrow">Elsewhere</span><a href="https://github.com/lilly-liu">GitHub ↗</a><a href="https://www.linkedin.com/in/lillyyliu/">LinkedIn ↗</a><a href="mailto:lillyliu@berkeley.edu">Email ↗</a><a href="/resume.pdf" download>Resume ⇩</a></nav>
       <div class="footer-column"><span class="eyebrow">Currently</span><p>Building AI-native tools at Cambridge Mobile Telematics.</p><span class="status"><span class="status-dot"></span>Open to good problems</span></div>
-    </div><div class="container footer-bottom"><p>© ${new Date().getFullYear()} Lilly Liu. Grown with care.</p><p>Designed &amp; built as an evolving internet garden.</p></div>`;
+    </div><div class="container footer-bottom"><p>© ${new Date().getFullYear()} Lilly Liu.</p></div>`;
   const toggle = document.querySelector(".menu-toggle");
   const menu = document.querySelector("#mobile-menu");
   const closeMenu = () => {

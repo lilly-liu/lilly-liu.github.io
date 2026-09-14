@@ -448,12 +448,23 @@ h3 {
   display: grid;
   color: var(--coral);
 }
-.typing-slot > span {
+.typing-slot > span,
+.typing-slot::after {
   grid-area: 1 / 1;
   min-width: 0;
 }
-.typing-measure {
+.typing-slot::after {
+  content: "excited to meet you";
   visibility: hidden;
+}
+.button-resume {
+  background: var(--coral);
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  font-weight: 600;
+}
+.button-resume:hover {
+  background: var(--sage);
 }
 .typing-line {
   overflow-wrap: anywhere;
