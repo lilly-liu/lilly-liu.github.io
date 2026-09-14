@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fcfaf1" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%232c251e'/%3E%3Ctext x='20' y='26' text-anchor='middle' font-family='Georgia' font-size='18' fill='%23fcfaf1'%3ELL%3C/text%3E%3C/svg%3E"
+    />
+    <link
+      rel="preload"
+      href="/fonts/fraunces-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/inter-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="/styles/portfolio.css" />
+    <script src="/js/portfolio.js" defer></script>
+    <title>Work · Lilly Liu</title>
+    <meta
+      name="description"
+      content="Selected AI, data, infrastructure and developer tooling projects by Lilly Liu."
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" id="site-header"></header>
+    <noscript
+      ><nav class="container" aria-label="Pages">
+        <a href="/">Home</a> · <a href="/work/">Work</a> ·
+        <a href="/about/">About</a> · <a href="/now/">Now</a> ·
+        <a href="/contact/">Contact</a>
+      </nav></noscript
+    >
+    <main id="main" class="container page-body work-page">
+      <section class="page-intro">
+        <p class="eyebrow">Work</p>
+        <h1>Personal projects, beyond the day job.</h1>
+        <p class="lead">
+          What I’m exploring on my own, followed by selected professional work.
+        </p>
+      </section>
+      <section
+        class="personal-projects"
+        aria-labelledby="personal-projects-title"
+      >
+        <div class="section-heading">
+          <h2 id="personal-projects-title">Personal projects</h2>
+        </div>
+        <div class="personal-project-grid">
+          <article class="personal-project-card card" id="hobbybff">
+            <span class="pill sage">Exploring · Concept</span>
+            <h3>hobbyBFF</h3>
+            <p>Try something new. Meet someone new.</p>
+            <p>
+              I’m exploring an activity-first way to make friends: find someone
+              to try a class or hobby with, based on compatible plans and
+              availability.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section
+        class="professional-work"
+        id="professional-work"
+        aria-labelledby="professional-work-title"
+      >
+        <div class="professional-work-heading">
+          <p class="eyebrow">Professional work</p>
+          <h2 id="professional-work-title">Selected projects at CMT</h2>
+          <p>Brief summaries of internal work.</p>
+        </div>
+        <div class="project-grid">
+          <article class="project-card card" id="ai-pr-reviewer">
+            <div class="project-meta">
+              <span class="pill sage">Developer tools</span
+              ><span class="project-date">CMT</span>
+            </div>
+            <h3>Organization-wide AI PR reviewer</h3>
+            <p>
+              I deployed an AI reviewer that reviews all GitHub pull requests
+              across the organization.
+            </p>
+          </article>
+          <article class="project-card card" id="ai-developer-tooling">
+            <div class="project-meta">
+              <span class="pill sage">Developer tools</span
+              ><span class="project-date">CMT</span>
+            </div>
+            <h3>Autonomous coding agent</h3>
+            <p>
+              I built a Claude SDK agent harness that turns Jira tickets into
+              pull requests across environments. It is deployed across 5+ teams.
+            </p>
+          </article>
+          <article
+            class="project-card card"
+            id="conversational-ai-orchestration"
+          >
+            <div class="project-meta">
+              <span class="pill sage">Infrastructure</span
+              ><span class="project-date">CMT</span>
+            </div>
+            <h3>Conversational AI platform</h3>
+            <p>
+              I built an MCP-based platform for self-serve AI agents and Slack
+              bots. It provides shared authentication, an MCP registry, and
+              conversational memory.
+            </p>
+          </article>
+          <article class="project-card card" id="text-to-sql-assistant">
+            <div class="project-meta">
+              <span class="pill sage">Data</span
+              ><span class="project-date">CMT</span>
+            </div>
+            <h3>Text-to-SQL assistant</h3>
+            <p>
+              A natural-language SQL assistant built as part of the shared AI
+              platform.
+            </p>
+          </article>
+          <article class="project-card card" id="incident-response-assistant">
+            <div class="project-meta">
+              <span class="pill sage">Infrastructure</span
+              ><span class="project-date">CMT</span>
+            </div>
+            <h3>Incident-response assistant</h3>
+            <p>An incident-response triager built on the shared AI platform.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer" id="site-footer"></footer>
+  </body>
+</html>
