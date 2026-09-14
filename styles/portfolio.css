@@ -444,6 +444,43 @@ h3 {
   line-height: 1.02;
   letter-spacing: -0.025em;
 }
+.typing-slot {
+  display: grid;
+  color: var(--coral);
+}
+.typing-slot > span {
+  grid-area: 1 / 1;
+  min-width: 0;
+}
+.typing-measure {
+  visibility: hidden;
+}
+.typing-line {
+  overflow-wrap: anywhere;
+}
+.typing-cursor {
+  display: inline-block;
+  width: 0;
+  font-weight: 300;
+  animation: typing-blink 1s step-end infinite;
+}
+.typing-paused .typing-cursor {
+  animation: none;
+  visibility: hidden;
+}
+.typing-toggle {
+  font: inherit;
+  font-size: 12px;
+  background: none;
+  border: 0;
+  padding: 6px 0;
+  cursor: pointer;
+}
+@keyframes typing-blink {
+  50% {
+    opacity: 0;
+  }
+}
 .thoughtful {
   position: relative;
   white-space: nowrap;
