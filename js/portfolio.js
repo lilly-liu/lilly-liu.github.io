@@ -1,5 +1,15 @@
 /* Shared navigation and interactions. Content remains in static HTML for GitHub Pages. */
 (() => {
+  document.querySelectorAll(".listening-preview").forEach((preview) => {
+    preview.addEventListener("toggle", () => {
+      const player = preview.querySelector("iframe[data-src]");
+      if (preview.open && player && !player.hasAttribute("src")) {
+        player.src = player.dataset.src;
+        preview.querySelector(".listening-note").textContent =
+          "A current rotation from my playlists.";
+      }
+    });
+  });
   const pages = [
     ["Home", "/"],
     ["Work", "/work/"],

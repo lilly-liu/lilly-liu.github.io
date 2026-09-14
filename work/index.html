@@ -40,354 +40,102 @@
         <a href="/contact/">Contact</a>
       </nav></noscript
     >
-    <main id="main" class="container page-body">
+    <main id="main" class="container page-body work-page">
       <section class="page-intro">
         <p class="eyebrow">Work</p>
-        <h1>A curated index of things I've built.</h1>
+        <h1>Personal projects, beyond the day job.</h1>
         <p class="lead">
-          Mostly AI-native tools, developer infrastructure, and data products —
-          each shaped by the same question: how do we make a complex system feel
-          simple to the people using it?
+          What I’m exploring on my own, followed by selected professional work.
         </p>
       </section>
-      <div class="filters" role="group" aria-label="Filter projects">
-        <button class="filter-button" aria-pressed="true" data-filter="all">
-          Selected work <span>4</span></button
-        ><button class="filter-button" aria-pressed="false" data-filter="AI">
-          AI <span>4</span></button
-        ><button
-          class="filter-button"
-          aria-pressed="false"
-          data-filter="Infrastructure"
-        >
-          Infrastructure <span>2</span></button
-        ><button
-          class="filter-button"
-          aria-pressed="false"
-          data-filter="Developer tools"
-        >
-          Developer tools <span>1</span></button
-        ><button class="filter-button" aria-pressed="false" data-filter="Data">
-          Data <span>1</span>
-        </button>
-      </div>
-      <p class="sr-only" id="filter-status" aria-live="polite">
-        Showing all 4 projects
-      </p>
-      <section class="project-grid" aria-label="Projects">
-        <article class="project-card card" data-categories="AI|Data">
-          <div class="project-meta">
-            <div class="tags">
-              <span class="pill coral">AI</span
-              ><span class="pill coral">Data</span>
-            </div>
-            <span class="project-date">CMT</span>
-          </div>
-          <div class="project-art" aria-hidden="true">
-            <svg viewBox="0 0 120 90">
-              <g stroke="currentColor" stroke-opacity=".25">
-                <path d="M30 24 60 45 90 24M30 66 60 45 90 66" />
-              </g>
-              <circle cx="60" cy="45" r="9" fill="currentColor" />
-              <g fill="currentColor" opacity=".4">
-                <circle cx="30" cy="24" r="5" />
-                <circle cx="90" cy="24" r="5" />
-                <circle cx="30" cy="66" r="5" />
-                <circle cx="90" cy="66" r="5" />
-              </g>
-            </svg>
-          </div>
-          <h3>Text-to-SQL Assistant</h3>
-          <p>
-            A safe internal AI tool that lets non-technical users ask questions
-            in plain language and query production data directly in Slack or
-            through an MCP client.
-          </p>
-          <div class="tags tech-tags">
-            <span class="tag">LLM orchestration</span
-            ><span class="tag">Postgres</span><span class="tag">Redshift</span
-            ><span class="tag">MCP</span><span class="tag">Slack</span>
-          </div>
-          <div class="project-links">
-            <a href="/work/#text-to-sql-assistant"
-              >View case study <span aria-hidden="true">↗</span></a
-            ><span class="internal-label">Internal project</span>
-          </div>
-        </article>
-        <article class="project-card card" data-categories="AI|Infrastructure">
-          <div class="project-meta">
-            <div class="tags">
-              <span class="pill sage">AI</span
-              ><span class="pill sage">Infrastructure</span>
-            </div>
-            <span class="project-date">CMT</span>
-          </div>
-          <div class="project-art" aria-hidden="true">
-            <svg viewBox="0 0 120 90">
-              <g stroke="currentColor" stroke-opacity=".25">
-                <path d="M30 24 60 45 90 24M30 66 60 45 90 66" />
-              </g>
-              <circle cx="60" cy="45" r="9" fill="currentColor" />
-              <g fill="currentColor" opacity=".4">
-                <circle cx="30" cy="24" r="5" />
-                <circle cx="90" cy="24" r="5" />
-                <circle cx="30" cy="66" r="5" />
-                <circle cx="90" cy="66" r="5" />
-              </g>
-            </svg>
-          </div>
-          <h3>Conversational AI Orchestration Platform</h3>
-          <p>
-            A platform powering internal AI chatbots and workflow assistants,
-            with shared authentication, an MCP server registry, and
-            conversational memory.
-          </p>
-          <div class="tags tech-tags">
-            <span class="tag">Agents</span><span class="tag">MCP</span
-            ><span class="tag">Auth</span
-            ><span class="tag">Conversational memory</span>
-          </div>
-          <div class="project-links">
-            <a href="/work/#conversational-ai-orchestration"
-              >View case study <span aria-hidden="true">↗</span></a
-            ><span class="internal-label">Internal project</span>
-          </div>
-        </article>
-        <article class="project-card card" data-categories="AI|Infrastructure">
-          <div class="project-meta">
-            <div class="tags">
-              <span class="pill lavender">AI</span
-              ><span class="pill lavender">Infrastructure</span>
-            </div>
-            <span class="project-date">CMT</span>
-          </div>
-          <div class="project-art" aria-hidden="true">
-            <svg viewBox="0 0 120 90">
-              <g stroke="currentColor" stroke-opacity=".25">
-                <path d="M30 24 60 45 90 24M30 66 60 45 90 66" />
-              </g>
-              <circle cx="60" cy="45" r="9" fill="currentColor" />
-              <g fill="currentColor" opacity=".4">
-                <circle cx="30" cy="24" r="5" />
-                <circle cx="90" cy="24" r="5" />
-                <circle cx="30" cy="66" r="5" />
-                <circle cx="90" cy="66" r="5" />
-              </g>
-            </svg>
-          </div>
-          <h3>Incident Response Assistant</h3>
-          <p>
-            An agentic incident-response triager built on shared AI
-            infrastructure, bringing incident-response assistance into internal
-            team workflows.
-          </p>
-          <div class="tags tech-tags">
-            <span class="tag">Agents</span
-            ><span class="tag">Incident response</span
-            ><span class="tag">MCP</span><span class="tag">Slack</span>
-          </div>
-          <div class="project-links">
-            <a href="/work/#incident-response-assistant"
-              >View case study <span aria-hidden="true">↗</span></a
-            ><span class="internal-label">Internal project</span>
-          </div>
-        </article>
-        <article class="project-card card" data-categories="Developer tools|AI">
-          <div class="project-meta">
-            <div class="tags">
-              <span class="pill coral">Developer tools</span
-              ><span class="pill coral">AI</span>
-            </div>
-            <span class="project-date">CMT</span>
-          </div>
-          <div class="project-art" aria-hidden="true">
-            <svg viewBox="0 0 120 90">
-              <g stroke="currentColor" stroke-opacity=".25">
-                <path d="M30 24 60 45 90 24M30 66 60 45 90 66" />
-              </g>
-              <circle cx="60" cy="45" r="9" fill="currentColor" />
-              <g fill="currentColor" opacity=".4">
-                <circle cx="30" cy="24" r="5" />
-                <circle cx="90" cy="24" r="5" />
-                <circle cx="30" cy="66" r="5" />
-                <circle cx="90" cy="66" r="5" />
-              </g>
-            </svg>
-          </div>
-          <h3>AI Developer Tooling</h3>
-          <p>
-            Internal tools and standards that improve developer velocity, from a
-            long-running coding agent to shared backend build workflows.
-          </p>
-          <div class="tags tech-tags">
-            <span class="tag">Claude Agent SDK</span
-            ><span class="tag">DynamoDB</span><span class="tag">MCP</span
-            ><span class="tag">Python</span><span class="tag">CI/CD</span>
-          </div>
-          <div class="project-links">
-            <a href="/work/#ai-developer-tooling"
-              >View case study <span aria-hidden="true">↗</span></a
-            ><span class="internal-label">Internal project</span>
-          </div>
-        </article>
+      <section
+        class="personal-projects"
+        aria-labelledby="personal-projects-title"
+      >
+        <div class="section-heading">
+          <h2 id="personal-projects-title">Personal projects</h2>
+        </div>
+        <div class="personal-project-grid">
+          <article class="personal-project-card card" id="hobbybff">
+            <span class="pill sage">Exploring · Concept</span>
+            <h3>hobbyBFF</h3>
+            <p>Try something new. Meet someone new.</p>
+            <p>
+              I’m exploring an activity-first way to make friends: find someone
+              to try a class or hobby with, based on compatible plans and
+              availability.
+            </p>
+          </article>
+        </div>
       </section>
-      <section class="case-studies" aria-label="Project case studies">
-        <details class="case-study card" id="text-to-sql-assistant" open>
-          <summary>
-            <span class="eyebrow">Case study</span>
-            <h2>Text-to-SQL Assistant</h2>
-            <span class="case-toggle" aria-hidden="true">+</span>
-          </summary>
-          <div class="case-grid">
-            <div>
-              <h3>The problem</h3>
-              <p>
-                Non-technical teams needed a self-serve way to query internal
-                production data.
-              </p>
+      <section
+        class="professional-work"
+        id="professional-work"
+        aria-labelledby="professional-work-title"
+      >
+        <div class="professional-work-heading">
+          <p class="eyebrow">Professional work</p>
+          <h2 id="professional-work-title">Selected projects at CMT</h2>
+          <p>Brief summaries of internal work.</p>
+        </div>
+        <div class="project-grid">
+          <article class="project-card card" id="ai-pr-reviewer">
+            <div class="project-meta">
+              <span class="pill sage">Developer tools</span
+              ><span class="project-date">CMT</span>
             </div>
-            <div>
-              <h3>The approach</h3>
-              <p>
-                Built an AI text-to-SQL bot connected to Redshift and Postgres,
-                accessible through Slack and MCP clients.
-              </p>
+            <h3>Organization-wide AI PR reviewer</h3>
+            <p>
+              I deployed an AI reviewer that reviews all GitHub pull requests
+              across the organization.
+            </p>
+          </article>
+          <article class="project-card card" id="ai-developer-tooling">
+            <div class="project-meta">
+              <span class="pill sage">Developer tools</span
+              ><span class="project-date">CMT</span>
             </div>
-            <div>
-              <h3>The result</h3>
-              <p>
-                Shipped a self-serve path to internal data for non-technical
-                users.
-              </p>
+            <h3>Autonomous coding agent</h3>
+            <p>
+              I built a Claude SDK agent harness that turns Jira tickets into
+              pull requests across environments. It is deployed across 5+ teams.
+            </p>
+          </article>
+          <article
+            class="project-card card"
+            id="conversational-ai-orchestration"
+          >
+            <div class="project-meta">
+              <span class="pill sage">Infrastructure</span
+              ><span class="project-date">CMT</span>
             </div>
-            <div>
-              <h3>The technology</h3>
-              <div class="tags">
-                <span class="tag">LLM orchestration</span
-                ><span class="tag">Postgres</span
-                ><span class="tag">Redshift</span><span class="tag">MCP</span
-                ><span class="tag">Slack</span>
-              </div>
+            <h3>Conversational AI platform</h3>
+            <p>
+              I built an MCP-based platform for self-serve AI agents and Slack
+              bots. It provides shared authentication, an MCP registry, and
+              conversational memory.
+            </p>
+          </article>
+          <article class="project-card card" id="text-to-sql-assistant">
+            <div class="project-meta">
+              <span class="pill sage">Data</span
+              ><span class="project-date">CMT</span>
             </div>
-          </div>
-        </details>
-        <details class="case-study card" id="conversational-ai-orchestration">
-          <summary>
-            <span class="eyebrow">Case study</span>
-            <h2>Conversational AI Orchestration Platform</h2>
-            <span class="case-toggle" aria-hidden="true">+</span>
-          </summary>
-          <div class="case-grid">
-            <div>
-              <h3>The problem</h3>
-              <p>
-                Internal agents and chatbots needed common infrastructure to
-                support different teams and workflows.
-              </p>
+            <h3>Text-to-SQL assistant</h3>
+            <p>
+              A natural-language SQL assistant built as part of the shared AI
+              platform.
+            </p>
+          </article>
+          <article class="project-card card" id="incident-response-assistant">
+            <div class="project-meta">
+              <span class="pill sage">Infrastructure</span
+              ><span class="project-date">CMT</span>
             </div>
-            <div>
-              <h3>The approach</h3>
-              <p>
-                Delivered an MCP orchestration platform with built-in
-                authentication, an MCP server registry, conversational memory,
-                and self-learning.
-              </p>
-            </div>
-            <div>
-              <h3>The result</h3>
-              <p>
-                Enabled self-serve AI agents and Slack chatbots, including an
-                incident-response triager and AskPlatform bot.
-              </p>
-            </div>
-            <div>
-              <h3>The technology</h3>
-              <div class="tags">
-                <span class="tag">Agents</span><span class="tag">MCP</span
-                ><span class="tag">Auth</span
-                ><span class="tag">Conversational memory</span>
-              </div>
-            </div>
-          </div>
-        </details>
-        <details class="case-study card" id="incident-response-assistant">
-          <summary>
-            <span class="eyebrow">Case study</span>
-            <h2>Incident Response Assistant</h2>
-            <span class="case-toggle" aria-hidden="true">+</span>
-          </summary>
-          <div class="case-grid">
-            <div>
-              <h3>The problem</h3>
-              <p>
-                Incident-response workflows were a use case for shared internal
-                AI assistance.
-              </p>
-            </div>
-            <div>
-              <h3>The approach</h3>
-              <p>
-                Delivered the agentic IRT triager as part of the MCP
-                orchestration platform, alongside other internal chatbots.
-              </p>
-            </div>
-            <div>
-              <h3>The result</h3>
-              <p>
-                Extended the shared platform to support incident-response
-                assistance.
-              </p>
-            </div>
-            <div>
-              <h3>The technology</h3>
-              <div class="tags">
-                <span class="tag">Agents</span
-                ><span class="tag">Incident response</span
-                ><span class="tag">MCP</span><span class="tag">Slack</span>
-              </div>
-            </div>
-          </div>
-        </details>
-        <details class="case-study card" id="ai-developer-tooling">
-          <summary>
-            <span class="eyebrow">Case study</span>
-            <h2>AI Developer Tooling</h2>
-            <span class="case-toggle" aria-hidden="true">+</span>
-          </summary>
-          <div class="case-grid">
-            <div>
-              <h3>The problem</h3>
-              <p>
-                Engineering teams needed repeatable workflows and useful AI
-                adoption across the organization.
-              </p>
-            </div>
-            <div>
-              <h3>The approach</h3>
-              <p>
-                Built a long-running agent harness that generates pull requests
-                from Jira tickets, with DynamoDB-backed memory and an internal
-                MCP layer. Standardized backend builds with a self-service CLI.
-              </p>
-            </div>
-            <div>
-              <h3>The result</h3>
-              <p>
-                Deployed to 5+ teams, with a 70% PR approval rate and
-                approximately 20% higher PR throughput per team. Reduced new
-                service setup from days to hours.
-              </p>
-            </div>
-            <div>
-              <h3>The technology</h3>
-              <div class="tags">
-                <span class="tag">Claude Agent SDK</span
-                ><span class="tag">DynamoDB</span><span class="tag">MCP</span
-                ><span class="tag">Python</span><span class="tag">CI/CD</span>
-              </div>
-            </div>
-          </div>
-        </details>
+            <h3>Incident-response assistant</h3>
+            <p>An incident-response triager built on the shared AI platform.</p>
+          </article>
+        </div>
       </section>
     </main>
     <footer class="site-footer" id="site-footer"></footer>

@@ -1117,6 +1117,69 @@ h3 {
   gap: 8px;
   margin-bottom: 32px;
 }
+.personal-projects {
+  padding-bottom: 72px;
+}
+.personal-project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.personal-project-card {
+  min-height: 240px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  background-image:
+    linear-gradient(#e3dcd222 1px, transparent 1px),
+    linear-gradient(90deg, #e3dcd222 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+.personal-project-card h3 {
+  margin-top: 18px;
+  font-size: 24px;
+}
+.personal-project-card p,
+.professional-work-heading > p:last-child {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+.professional-work {
+  padding-top: 72px;
+  border-top: 1px solid var(--border);
+}
+.professional-work-heading {
+  max-width: 720px;
+  margin-bottom: 28px;
+}
+.professional-work-heading h2 {
+  margin-top: 8px;
+}
+.work-page .professional-work > .project-grid .project-art {
+  display: none;
+}
+.work-page .professional-work > .project-grid .project-card h3 {
+  margin-top: 20px;
+  font-size: 24px;
+}
+.work-page .professional-work > .project-grid .project-card > p {
+  font-size: 14px;
+}
+@media (max-width: 767px) {
+  .personal-project-grid {
+    grid-template-columns: 1fr;
+  }
+  .personal-project-card {
+    min-height: 190px;
+  }
+  .professional-work {
+    padding-top: 56px;
+  }
+}
 .filter-button {
   display: inline-flex;
   gap: 12px;
@@ -1378,4 +1441,29 @@ textarea {
     animation: none !important;
     transition: none !important;
   }
+}
+.portrait-card > img[src="/images/profile.jpg"] {
+  object-position: center 60%;
+}
+.personal-project-grid:has(> :only-child) {
+  grid-template-columns: minmax(0, 720px);
+}
+.listening-preview {
+  max-width: 560px;
+  margin-top: 24px;
+}
+.listening-preview summary {
+  cursor: pointer;
+  padding: 12px 0;
+  font-weight: 500;
+}
+.listening-preview iframe {
+  display: block;
+  border: 0;
+  border-radius: 12px;
+  margin: 12px 0;
+}
+.listening-note {
+  font-size: 13px;
+  color: var(--muted);
 }
