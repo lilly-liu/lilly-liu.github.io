@@ -1,5 +1,18 @@
 /* Shared navigation and interactions. Content remains in static HTML for GitHub Pages. */
 (() => {
+  const prototype = document.querySelector(".prototype-preview");
+  if (prototype) {
+    const desktop = matchMedia("(min-width: 1024px)");
+    const frame = prototype.querySelector("iframe");
+    const syncPreview = () => {
+      if (!desktop.matches) prototype.open = false;
+      if (prototype.open && desktop.matches) {
+        if (!frame.hasAttribute("src")) frame.src = frame.dataset.src;
+      } else frame.removeAttribute("src");
+    };
+    prototype.addEventListener("toggle", syncPreview);
+    desktop.addEventListener("change", syncPreview);
+  }
   const typingName = document.querySelector("#typing-name");
   if (typingName) {
     const phrases = [
