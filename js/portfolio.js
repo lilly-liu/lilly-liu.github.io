@@ -114,7 +114,7 @@
     </nav><nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" hidden>${pages.map(link).join("")}<a href="/resume.pdf" download>Download résumé</a></nav>`;
   document.querySelector("#site-footer").innerHTML = `
     <div class="container footer-grid">
-      <div class="footer-bio"><a href="/" class="brand">${brand}</a><p>A software engineer building thoughtful systems with AI — and a small corner of the internet that keeps growing.</p>${plant}</div>
+      <div class="footer-bio"><a href="/" class="brand">${brand}</a><p>Programmer, product-manager-in-training, and musician. Based in Boston.</p>${plant}</div>
       <nav class="footer-column" aria-label="Footer pages"><span class="eyebrow">Pages</span>${pages.slice(1).map(link).join("")}</nav>
       <nav class="footer-column" aria-label="Elsewhere"><span class="eyebrow">Elsewhere</span><a href="https://github.com/lilly-liu">GitHub ↗</a><a href="https://www.linkedin.com/in/lillyyliu/">LinkedIn ↗</a><a href="mailto:lillyliu@berkeley.edu">Email ↗</a><a href="/resume.pdf" download>Resume ⇩</a></nav>
       <div class="footer-column"><span class="eyebrow">Currently</span><p>Building AI-native tools at Cambridge Mobile Telematics.</p><span class="status"><span class="status-dot"></span>Open to good problems</span></div>
