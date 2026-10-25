@@ -7,7 +7,6 @@ if (typingName) {
     "a software engineer",
     "a doer",
     "a team player",
-    "a curious builder",
   ];
   const motion = matchMedia("(prefers-reduced-motion: reduce)");
   const toggle = document.querySelector(".typing-toggle");
