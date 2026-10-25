@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#f4efe5" />
     <meta
       name="description"
-      content="Lilly Liu is a software engineer building thoughtful, reliable products."
+      content="Lilly Liu builds thoughtful, reliable products for people and teams."
     />
     <link
       rel="icon"
@@ -19,26 +19,47 @@
       type="font/woff2"
       crossorigin
     />
-    <link rel="stylesheet" href="/styles/minimal.css?v=1" />
-    <title>Lilly Liu | Software Engineer</title>
+    <link rel="stylesheet" href="/styles/minimal.css?v=2" />
+    <script src="/js/minimal.js?v=1" defer></script>
+    <title>Lilly Liu</title>
   </head>
   <body>
     <main>
       <section class="intro" aria-labelledby="page-title">
         <p class="name">Lilly Liu</p>
         <div class="introduction">
-          <h1 id="page-title">Software engineer.</h1>
+          <h1 class="typing-greeting" id="page-title">
+            <span class="sr-only">Hi, I’m Lilly.</span>
+            <span aria-hidden="true">
+              Hi, I’m<br />
+              <span class="typing-slot">
+                <span class="typing-line"
+                  ><span id="typing-name">Lilly</span
+                  ><span class="typing-cursor">|</span></span
+                >
+              </span>
+            </span>
+          </h1>
           <p class="summary">
             I build thoughtful, reliable products for people and teams.
+            <span class="current-role"
+              >Currently building software at CMT (Cambridge Mobile
+              Telematics).</span
+            >
           </p>
-          <a
-            class="profile-link"
-            href="https://www.linkedin.com/in/lillyyliu/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn <span aria-hidden="true">↗</span>
-          </a>
+          <div class="profile-actions">
+            <a
+              class="profile-link"
+              href="https://www.linkedin.com/in/lillyyliu/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn <span aria-hidden="true">↗</span>
+            </a>
+            <button class="typing-toggle" type="button" hidden>
+              Pause animation
+            </button>
+          </div>
         </div>
       </section>
     </main>
