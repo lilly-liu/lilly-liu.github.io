@@ -1,15 +1,31 @@
 const typingName = document.querySelector("#typing-name");
 
 if (typingName) {
-  const phrases = ["Lilly", "刘丽达", "silly lilly", "lils"];
+  const phrases = [
+    "Lilly",
+    "刘丽达",
+    "a software engineer",
+    "a doer",
+    "a team player",
+    "a curious builder",
+  ];
   const motion = matchMedia("(prefers-reduced-motion: reduce)");
   const toggle = document.querySelector(".typing-toggle");
   const greeting = document.querySelector(".typing-greeting");
+  const typingSlot = document.querySelector(".typing-slot");
   let index = 0;
   let length = Array.from(phrases[0]).length;
   let deleting = true;
   let paused = false;
   let timer;
+
+  const fitPhrase = (phrase) => {
+    let size = "1em";
+    if (phrase.length >= 18) size = "0.58em";
+    else if (phrase.length >= 16) size = "0.68em";
+    else if (phrase.length >= 13) size = "0.78em";
+    typingSlot.style.setProperty("--phrase-size", size);
+  };
 
   const schedule = (delay) => {
     clearTimeout(timer);
@@ -25,6 +41,7 @@ if (typingName) {
 
     if (length === 0 && deleting) {
       index = (index + 1) % phrases.length;
+      fitPhrase(phrases[index]);
       deleting = false;
       schedule(350);
     } else if (length === letters.length && !deleting) {
@@ -48,6 +65,7 @@ if (typingName) {
       length = Array.from(phrases[0]).length;
       deleting = true;
       typingName.textContent = phrases[0];
+      fitPhrase(phrases[0]);
     } else {
       schedule(1700);
     }
@@ -60,5 +78,6 @@ if (typingName) {
   });
   motion.addEventListener("change", sync);
   document.addEventListener("visibilitychange", sync);
+  fitPhrase(phrases[0]);
   sync();
 }

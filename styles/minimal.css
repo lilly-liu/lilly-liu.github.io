@@ -79,22 +79,19 @@ h1 {
 
 .typing-slot {
   display: grid;
+  min-height: 1.05em;
   color: var(--accent);
 }
 
-.typing-slot > span,
-.typing-slot::after {
+.typing-slot > span {
   grid-area: 1 / 1;
   min-width: 0;
 }
 
-.typing-slot::after {
-  content: "silly lilly";
-  visibility: hidden;
-}
-
 .typing-line {
-  overflow-wrap: anywhere;
+  font-size: var(--phrase-size, 1em);
+  line-height: 1.1;
+  white-space: nowrap;
 }
 
 .typing-cursor {
